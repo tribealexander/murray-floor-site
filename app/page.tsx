@@ -98,9 +98,9 @@ export default function Home() {
       <section className="border-y border-border bg-surface">
         <div className="mx-auto max-w-5xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 text-center">
           <Stat value={<><CountUp to={18} duration={2} digitEffect="blur" /><span>+</span></>} label="years in business" />
-          <Stat value={<span>Family-owned</span>} label="owner-led" />
-          <Stat value={<span>Guaranteed</span>} label="on time, on budget" />
-          <Stat value={<span className="text-2xl md:text-3xl">Southern Ontario</span>} label="GTA · Hamilton · Kawarthas · SW Ont." />
+          <Stat value="Family-owned" label="owner-led" />
+          <Stat value="Guaranteed" label="on time, on budget" />
+          <Stat value="Southern Ontario" label="GTA · Hamilton · Kawarthas · SW Ont." />
         </div>
       </section>
 
@@ -217,8 +217,8 @@ export default function Home() {
 function Stat({ value, label }: { value: React.ReactNode; label: string }) {
   return (
     <div>
-      <div className="font-display text-3xl md:text-4xl font-semibold flex items-baseline justify-center">{value}</div>
-      <div className="mt-1 text-sm text-muted">{label}</div>
+      <div className="font-display text-xl md:text-2xl font-semibold flex items-baseline justify-center whitespace-nowrap">{value}</div>
+      <div className="mt-1 text-xs md:text-sm text-muted">{label}</div>
     </div>
   );
 }
